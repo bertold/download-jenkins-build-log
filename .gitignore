@@ -3,4 +3,6 @@
 /venv
 /build
 /download_jenkins_build_log_bertold.egg-info
+*.pyc
+/*.egg-info
 

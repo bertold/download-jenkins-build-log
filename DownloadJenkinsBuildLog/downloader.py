@@ -47,6 +47,10 @@ def create_target_directory():
 
 
 def download_log_simple():
+    """
+    Download the log of job types that have a single console log
+    :return: 0 in case of success, -1 in case of an error
+    """
     response = requests.get("{}/job/{}/{}/consoleText".format(jenkins_url, job_name, build_id), stream=True)
     if response.status_code == 200:
         filename = "{}/{}".format(target_directory, build_id)
@@ -62,6 +66,10 @@ def download_log_simple():
 
 
 def download_log_matrix():
+    """
+    Download the logs of jobs with multiple console log files
+    :return: 0 in case of success, -1 in case of an error
+    """
     response = requests.get("{}/job/{}/{}/api/json".format(jenkins_url, job_name, build_id))
     runs = response.json()['runs']
     for run in runs:
@@ -84,6 +92,10 @@ def download_log_matrix():
 
 
 def download_logs():
+    """
+    Download the build log file(s) to the destination directory
+    :return: 0 in case of success, -1 in case of an error
+    """
     create_target_directory()
 
     global build_id
@@ -102,6 +114,9 @@ def download_logs():
     return -1
 
 
-parse_command_line_arguments()
-result_code = download_logs()
-exit(result_code)
+def main():
+    parse_command_line_arguments()
+    return download_logs()
+
+
+exit(main())

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="download-jenkins-build-log-bertold",
-    version="0.0.1a1",
+    version="0.0.1a3",
     author="Bertold Kolics",
     author_email="bertold@qualityraven.com",
     description="Command-line utility for downloading Jenkins job console logs",
@@ -23,4 +23,8 @@ setuptools.setup(
     keywords="Jenkins logs tools",
     project_urls={ "Source": "https://github.com/bertold/download-jenkins-build-log"},
     python_requires=">=3",
+    install_requires=['requests'],
+    entry_points = {
+        'console_scripts': ['download-jenkins-build-log=DownloadJenkinsBuildLog.downloader:main'],
+    }
 )
