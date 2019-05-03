@@ -1,5 +1,7 @@
 # download-jenkins-build-log utility
 
+![Build status](https://travis-ci.org/bertold/download-jenkins-build-log.svg?branch=master)
+
 Use
 ```bash
 download-jenkins-build-log.py -h
