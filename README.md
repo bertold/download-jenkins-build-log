@@ -2,6 +2,23 @@
 
 ![Build status](https://travis-ci.org/bertold/download-jenkins-build-log.svg?branch=master)
 
+This is a simple tool that enables downloading console output files
+from Jenkins jobs. Freestyle, pipeline and matrix jobs are supported.
+
+## Pre-requisites
+
+Python 3.3 or later
+
+## Installation
+
+```
+pip3 install download-jenkins-build-log-bertold
+```
+
+
+
+## Basic Usage
+
 Use
 ```bash
 download-jenkins-build-log -h
