@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="download-jenkins-build-log-bertold",
-    version="0.0.1a4",
+    version="0.0.1a5",
     author="Bertold Kolics",
     author_email="bertold@qualityraven.com",
     description="Command-line utility for downloading Jenkins job console logs",
