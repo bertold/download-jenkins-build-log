@@ -32,4 +32,13 @@ instance at `https://myjenkins.example.com:8080`, use the following command line
 download-jenkins-build-log --url https://myjenkins.example.com:8080 --build 123 --directory logs my-freestyle-job
 ```
 
+## Authentication
+
+You may use the ```--login``` to set the user name and the ```--token``` to set
+the password or API token to access Jenkins. Jenkins documentation recommends
+creating an [API token](https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients)
+to use with tools.
+
+## Return Codes
+
 The tool will return `0` in case of successful execution, and `-1` in case of an error. 
