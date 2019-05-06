@@ -39,6 +39,14 @@ the password or API token to access Jenkins. Jenkins documentation recommends
 creating an [API token](https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients)
 to use with tools.
 
+Alternatively, you can also provide credentials with the following environment
+variables.
+
+| Environment variable name                  | Description           |
+|--------------------------------------------|-----------------------|
+| ```DOWNLOAD_JENKINS_BUILD_LOG_LOGIN```     | login name            |
+| ```DOWNLOAD_JENKINS_BUILD_LOG_API_TOKEN``` | password or API token |
+
 ## Return Codes
 
 The tool will return `0` in case of successful execution, and `-1` in case of an error. 
