@@ -32,8 +32,19 @@ def parse_command_line_arguments():
     build_id = args.build
     download_all = args.all
     target_directory = args.directory if args.directory else "{}-{}".format(job_name, build_id if build_id else "last")
-    login_name = args.login
-    api_token = args.token
+    if args.login:
+        login_name = args.login
+    elif 'DOWNLOAD_JENKINS_BUILD_LOG_LOGIN' in os.environ:\
+        login_name = os.environ['DOWNLOAD_JENKINS_BUILD_LOG_LOGIN']
+    else:
+        login_name = None
+
+    if args.token:
+        api_token = args.token
+    elif 'DOWNLOAD_JENKINS_BUILD_LOG_API_TOKEN' in os.environ:
+        api_token = os.environ['DOWNLOAD_JENKINS_BUILD_LOG_API_TOKEN']
+    else:
+        api_token = None
 
 
 def get_last_build():
