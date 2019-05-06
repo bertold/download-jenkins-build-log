@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="download-jenkins-build-log-bertold",
-    version="0.0.1a6",
+    name="download-jenkins-build-log",
+    version="0.0.1a7",
     author="Bertold Kolics",
     author_email="bertold@qualityraven.com",
     description="Command-line utility for downloading Jenkins job console logs",

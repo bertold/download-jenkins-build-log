@@ -12,7 +12,7 @@ Python 3.3 or later
 ## Installation
 
 ```
-pip3 install download-jenkins-build-log-bertold
+pip3 install download-jenkins-build-log
 ```
 
 
