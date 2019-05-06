@@ -1,6 +1,7 @@
 # download-jenkins-build-log utility
 
 ![Build status](https://travis-ci.org/bertold/download-jenkins-build-log.svg?branch=master)
+[![PyPI version](https://badge.fury.io/py/download-jenkins-build-log.svg)](https://badge.fury.io/py/download-jenkins-build-log)
 
 This is a simple tool that enables downloading console output files
 from Jenkins jobs. Freestyle, pipeline and matrix jobs are supported.
